@@ -1,0 +1,6 @@
+﻿@model IList<HartleyMarksAssignment.Models.Category>
+
+@foreach (var category in Model)
+{
+    @Html.Partial("_Category", category);
+}

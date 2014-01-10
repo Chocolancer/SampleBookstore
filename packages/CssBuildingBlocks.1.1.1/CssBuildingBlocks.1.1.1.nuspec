@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>CssBuildingBlocks</id>
+    <version>1.1.1</version>
+    <title>CssBuildingBlocks</title>
+    <authors>mg1075</authors>
+    <owners>mg1075</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/mg1075/CssBuildingBlocks</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CSSBuildingBlocks is a set of css stylesheets whose primary purpose is to provide vertical and horizontal "spacing helpers". They have no dependencies on existing frameworks such as the 960 grid system or twitter bootstrap, but they can become especially helpful when used in conjunction with one of these frameworks.
+
+Simple? Yes. Useful? Yes.</description>
+    <summary>One css stylesheet for vertical spacer divs, and another for inline horizontal spacer divs. Think of them as legos for your css layouts.</summary>
+    <releaseNotes />
+    <copyright>2013</copyright>
+    <language />
+    <tags>css</tags>
+  </metadata>
+</package>

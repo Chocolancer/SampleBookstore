@@ -1,0 +1,31 @@
+﻿@model HartleyMarksAssignment.Models.Item
+
+<div class="col-md-6 row item-box">
+    <div class="col-md-6">
+        <img src="~/Content/ProductImages/@Model.Image" class="img-responsive img-rounded" alt="@Model.Title" />
+    </div>
+    <div class="col-md-6">
+        <h3>@Model.Title</h3>
+        <p class="text-muted">Publisher: @Model.Publisher</p>
+        <p class="text-muted">Genre: @Model.Genre</p>
+        <p>@Model.Description</p>
+
+        <div>
+            @if (@Model.ReleaseDate <= @DateTime.Now)
+            {
+                <button class="btn btn-success btn-block" data-toggle="modal" data-target="#buy-modal-@Model.Id">Buy Now</button>
+                
+                <!-- Buy modal -->
+                <div class="modal fade" id="buy-modal-@Model.Id" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        @Html.Partial("_BuyModal", new HartleyMarksAssignment.Models.Transaction { ItemTitle = @Model.Title })
+                    </div>
+                </div>
+            }
+            else
+            {
+                <h4><strong>@Model.ReleaseDate.ToString("MMMM d, yyyy")</strong></h4>
+            }
+        </div>
+    </div>
+</div>

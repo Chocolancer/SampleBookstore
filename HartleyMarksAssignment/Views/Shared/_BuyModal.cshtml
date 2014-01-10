@@ -1,0 +1,36 @@
+﻿@model HartleyMarksAssignment.Models.Transaction
+
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Input Transaction Details : @Model.ItemTitle</h4>
+    </div>
+    <div class="modal-body">
+        @using (Html.BeginForm())
+        {
+            @Html.Hidden("ItemTitle", @Model.ItemTitle)
+            <div class="input-group">
+                @Html.TextBox("CreditCardNo", null, new { @class = "form-control", placeholder = "Credit Card No." })
+            </div>
+            <div class="input-group">
+                @Html.TextBox("CVV", null, new { @class = "form-control", placeholder = "CVV" })
+            </div>
+            <div class="input-group">
+                @Html.TextBox("Expire", null, new { @class = "form-control", placeholder = "Expiration (MM/DD)" })
+            </div>
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Card Type <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">VISA</a></li>
+                  <li><a href="#">MasterCard</a></li>
+                  <li><a href="#">AMEX</a></li>
+                </ul>
+              </div>
+            </div>
+        }
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary buy-item">Complete Transaction</button>
+    </div>
+</div>
